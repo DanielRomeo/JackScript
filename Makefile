@@ -1,12 +1,12 @@
 
 output: main.o ./jackstring/jackstring.o
-	g++ main.o ./jackstring/jackstring.o  -o output 
+	g++-7 -std=c++17 main.o ./jackstring/jackstring.o  -o output 
 
 main.o: main.cpp
-	g++ -c main.cpp
+	g++-7 -std=c++17 -c main.cpp
 
 jackstring.o: ./jackstring/jackstring.cpp ./jackstring/jackstring.h
-	g++ -c ./jackstring/jackstring.cpp
+	g++-7 -std=c++17 -c ./jackstring/jackstring.cpp
 
 clean:
 	rm *.o output
